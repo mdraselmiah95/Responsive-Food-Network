@@ -1,0 +1,413 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mukta", sans-serif;
+}
+
+/* navbar css */
+nav {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0% 5% 0% 5%;
+  flex-wrap: wrap;
+}
+
+nav .logo {
+  font-size: 4em;
+  font-family: "Qahiri", sans-serif;
+  background: linear-gradient(#ff9966, #ff5e62);
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+  background-clip: border-box;
+  -webkit-background-clip: border-box;
+  -moz-background-clip: border-box;
+  -ms-background-clip: border-box;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  font-weight: 600;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: #fba24f;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #111;
+  background: #fff;
+}
+
+nav .menu-btn i {
+  color: #fba24f;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/* nav media query start */
+@media (max-width: 1000px) {
+  nav {
+    padding: 0 40px 0 50px;
+    background: #694d3d9e;
+  }
+}
+
+@media (max-width: 920px) {
+  nav .menu-btn i {
+    display: block;
+  }
+
+  #click:checked~.menu-btn i:before {
+    content: "\f00d";
+  }
+
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #694d3d9e;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  #click:checked~ul {
+    left: 0;
+  }
+
+  nav ul li {
+    width: 100%;
+    margin: 40px 0;
+  }
+
+  nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  #click:checked~ul li a {
+    margin-left: 0px;
+  }
+
+  nav ul li a:hover {
+    background: none;
+    color: cyan;
+  }
+}
+
+/* nav media query end */
+
+/* section one start */
+.section-one-container {
+  display: flex;
+  flex-direction: row;
+  margin: 2% 5%;
+}
+
+.section-one-content {
+  margin-top: 14%;
+}
+
+.section-one-content span {
+  font-family: "Righteous", cursive;
+  background: linear-gradient(#fba24f, #ff1e1e);
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+  background-clip: border-box;
+  -webkit-background-clip: border-box;
+  -moz-background-clip: border-box;
+  -ms-background-clip: border-box;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+}
+
+.section-one-content h1 {
+  font-weight: 700;
+  color: rgb(103, 103, 103);
+  font-size: 3em;
+  font-family: Righteous, cursive;
+  letter-spacing: 2px;
+  line-height: 65px;
+}
+
+.section-one-content p {
+  color: #828282;
+  font-size: 1.25em;
+  margin: 4% 0;
+}
+
+/* button css */
+.s1-my-btn {
+  background: #cbe055;
+  background-image: -webkit-linear-gradient(top, #cbe055, #86cc58);
+  background-image: -moz-linear-gradient(top, #cbe055, #86cc58);
+  background-image: -ms-linear-gradient(top, #cbe055, #86cc58);
+  background-image: -o-linear-gradient(top, #cbe055, #86cc58);
+  background-image: linear-gradient(to bottom, #f1df70, #f57474);
+  -webkit-border-radius: 30;
+  -moz-border-radius: 30;
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 2% 5%;
+  text-decoration: none;
+}
+
+.s1-my-btn:hover {
+  background: #2d9fd4;
+  background-image: -webkit-linear-gradient(top, #2d9fd4, #41d184);
+  background-image: -moz-linear-gradient(top, #2d9fd4, #41d184);
+  background-image: -ms-linear-gradient(top, #2d9fd4, #41d184);
+  background-image: -o-linear-gradient(top, #2d9fd4, #41d184);
+  background-image: linear-gradient(to bottom, #2d9fd4, #41d184);
+  text-decoration: none;
+}
+
+.section-one-img {
+  padding: 3% 0% 3% 5%;
+}
+
+.section-one-img img {
+  width: 100%;
+}
+
+/* section one media quire */
+@media (max-width: 1024px) {
+  .section-one-container {
+    flex-direction: column;
+  }
+
+  .section-one-content {
+    padding: 2% 3%;
+    text-align: center;
+    margin: 2% 0%;
+  }
+
+  .section-one-content h1 {
+    font-size: 2.4em;
+  }
+
+  .section-one-content p {
+    font-size: 1em;
+    padding: 1% 10%;
+  }
+
+  .section-one-img {
+    padding: 4% 15%;
+  }
+
+  .section-one-img img {
+    width: 100%;
+  }
+
+  .s1-my-btn {
+    border-radius: 20px;
+    padding: 5px 15px;
+  }
+}
+
+/* ------------------
+section two start
+-------------------- */
+.section-two-main-container {
+  background-image: url(../images/bg-1.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.section-two-container {
+  display: flex;
+  align-items: center;
+  padding: 5% 5% 1% 5%;
+}
+
+.section-two-img {
+  text-align: center;
+  width: 50%;
+}
+
+.section-two-content {
+  width: 50%;
+}
+
+.section-two-content h2 {
+  color: #676767;
+  font-size: 3em;
+  font-family: "Righteous",
+    cursive;
+}
+
+.section-two-content p {
+  padding: 2% 14% 5% 0;
+  color: #252525;
+}
+
+.s2-my-btn {
+  background: #cbe055;
+  background-image: -webkit-linear-gradient(top, #cbe055, #86cc58);
+  background-image: -moz-linear-gradient(top, #cbe055, #86cc58);
+  background-image: -ms-linear-gradient(top, #cbe055, #86cc58);
+  background-image: -o-linear-gradient(top, #cbe055, #86cc58);
+  background-image: linear-gradient(to bottom, #f1df70, #f57474);
+  -webkit-border-radius: 30;
+  -moz-border-radius: 30;
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 2% 5%;
+  text-decoration: none;
+}
+
+.s2-my-btn:hover {
+  background: #2d9fd4;
+  background-image: -webkit-linear-gradient(top, #2d9fd4, #41d184);
+  background-image: -moz-linear-gradient(top, #2d9fd4, #41d184);
+  background-image: -ms-linear-gradient(top, #2d9fd4, #41d184);
+  background-image: -o-linear-gradient(top, #2d9fd4, #41d184);
+  background-image: linear-gradient(to bottom, #2d9fd4, #41d184);
+  text-decoration: none;
+}
+
+/* section two media query start */
+
+@media only screen and (max-width:992px) {
+  .section-two-container {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 0% 5% 0%;
+  }
+
+  .section-two-content {
+    width: 70%;
+  }
+
+  .section-two-img {
+    display: none;
+  }
+
+  .section-two-content p {
+    margin: 3% 0 6% 0;
+    padding: 0;
+  }
+}
+
+/*-------------------------
+ section three css start 
+ -------------------------*/
+.section-three-container-one {
+  text-align: center;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.s3-container-h2 {
+  color: #676767;
+  font-size: 3em;
+  font-family: "Righteous", cursive;
+}
+
+.s3-container-p {
+  padding: 1% 25%;
+  color: #252525;
+}
+
+.section-three-container-two {
+  display: flex;
+  flex-direction: row;
+  margin: 2% 5%;
+}
+
+.section-three-content {
+  padding: 1% 1%;
+  text-align: center;
+  box-shadow: 0px 0px 40px rgb(0 0 0 / 15%);
+  border-radius: 30px;
+  margin: 0% 2%;
+}
+
+.section-three-content img {
+  border-radius: 20px;
+  width: 100%;
+}
+
+.section-three-content h2 {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.section-three-content p {
+  margin: 15px 0;
+  text-align: left;
+  line-height: 30px;
+}
+
+/* @media (min-width: 769px) and (max-width: 1024px) {
+  .section-three-container-two {
+    flex-direction: column;
+  }
+  .section-three-content {
+    padding: 2% 3%;
+    text-align: center;
+    margin: 2% 0%;
+  }
+  .section-three-content img {
+    width: 100%;
+  }
+} */
+
+/* section three media query start */
+@media (max-width: 900px) {
+  .section-three-container-two {
+    flex-direction: column;
+  }
+
+  .section-three-content {
+    padding: 2% 3%;
+    text-align: center;
+    margin: 2% 0%;
+  }
+
+  .section-three-content img {
+    width: 100%;
+  }
+}
+
+/* section three media query end */
+
+/* font-family: 'Mukta', sans-serif;
+font-family: 'Qahiri', sans-serif;
+font-family: 'Righteous', cursive; */
