@@ -19,7 +19,7 @@ nav {
 }
 
 nav .logo {
-  font-size: 4em;
+  font-size: 4.4em;
   font-family: "Qahiri", sans-serif;
   background: linear-gradient(#ff9966, #ff5e62);
   -webkit-text-fill-color: transparent;
@@ -48,10 +48,9 @@ nav ul li {
 nav ul li a {
   color: #fba24f;
   text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 21px;
+  font-weight: 700;
   padding: 8px 15px;
-  border-radius: 5px;
   letter-spacing: 1px;
   transition: all 0.3s ease;
 }
