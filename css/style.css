@@ -5,7 +5,9 @@
   font-family: "Mukta", sans-serif;
 }
 
-/* navbar css */
+/* -----------
+navbar css 
+-------------*/
 nav {
   display: flex;
   height: 80px;
@@ -128,7 +130,9 @@ input[type="checkbox"] {
 
 /* nav media query end */
 
-/* section one start */
+/* -----------------
+section one start
+-------------------- */
 .section-one-container {
   display: flex;
   flex-direction: row;
